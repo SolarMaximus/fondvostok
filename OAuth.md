@@ -36,7 +36,7 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 
 Пример запроса:
 
-```json
+```javascript
 {
   client_id: "1234abc",
   client_secret: "2345bcd",
@@ -64,7 +64,7 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 
 Пример ответа:
 
-```json
+```javascript
 {
   error: "invalid_client",
   error_description: "Client not found",
@@ -79,9 +79,9 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 3. **refresh_token** - токен, через который происходит обновление access_token.
 4. **grant_type** - должен быть передан "refresh_token".
 
-Пример запроса:
+Пример ответа:
 
-```json
+```javascript
 {
   client_id: "1234abc",
   client_secret: "2345bcd",
