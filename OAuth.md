@@ -9,7 +9,7 @@
 4. **state** - идентификатор сессии клиента. Является опциональным. 
 
 Пример GET-запроса:
-http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://yandex.ru
+http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://your_domain
 
 ## Authorization Response
 
@@ -42,7 +42,7 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
   client_secret: "2345bcd",
   code: "veryuniquevalue",
   grant_type: "authorization_code",
-  redirect_uri: "http://yandex.ru"
+  redirect_uri: "http://yourdomain"
 }
 ```
 
