@@ -69,6 +69,7 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
   error:"invalid_client",
   error_description:"Client not found",
 }
+```
 
 ## POST Refresh Token Request
 
