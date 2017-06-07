@@ -5,12 +5,10 @@
 Клиент формирует POST-запрос по адресу http://domain/main/vostok/areas
 
 Для авторизации требуется передать access_token пользователя. Возможно 2 варианта:
-1. через HTTP заголовок. 
 
-Пример: Authorization: Bearer {your_access_token_here}
-2. через параметр строки запроса. 
+1. через HTTP заголовок. Пример: Authorization: Bearer {your_access_token_here}
 
-Пример: http://domain/main/vostok/areas?access_token={your_access_token_here}
+2. через параметр строки запроса. Пример: http://domain/main/vostok/areas?access_token={your_access_token_here}
 
 Данные по участку необходимо передать в json формате. 
 
