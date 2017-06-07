@@ -1,16 +1,19 @@
-# API Privatization-FondVostok
+# API Privatization - fondvostok 
 
 ## POST Создание нового участка
 
 Клиент формирует POST-запрос по адресу http://domain/main/vostok/areas
 
 Для авторизации требуется передать access_token пользователя. Возможно 2 варианта:
-1. через HTTP заголовок
-	Пример: Authorization: Bearer {your_access_token_here}
-2. через параметр строки запроса
-	Пример: http://domain/main/vostok/areas?access_token={your_access_token_here}
+1. через HTTP заголовок. 
+
+Пример: Authorization: Bearer {your_access_token_here}
+2. через параметр строки запроса. 
+
+Пример: http://domain/main/vostok/areas?access_token={your_access_token_here}
 
 Данные по участку необходимо передать в json формате. 
+
 На текущий момент обязательные поля:
 1. **id** - идентификатор участка, уникальная строка
 1. **coords** - массив координат в градусах с точностью 6 точек после запятой
@@ -87,6 +90,7 @@
 ## POST Получение информации об участках
 
 Клиент формирует POST-запрос по адресу http://domain/main/vostok/areas/search
+
 На текущий момент авторизация не требуется.
 
 Массив идентификаторов участков необходимо передать в json формате. 
@@ -127,6 +131,7 @@
 ## GET Получение информации об участке
 
 Клиент формирует GET-запрос по адресу http://domain/main/vostok/areas/{id}
+
 На текущий момент авторизация не требуется.
 
 Пример ответа сервера:
