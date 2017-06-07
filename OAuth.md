@@ -38,9 +38,9 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 
 ```json
 {
-  client_id:"1234abc",
-  client_secret:"2345bcd",
-  code:"veryuniquevalue",
+  client_id: "1234abc",
+  client_secret: "2345bcd",
+  code: "veryuniquevalue",
   grant_type: "authorization_code",
   redirect_uri: "http://yandex.ru"
 }
@@ -66,8 +66,8 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 
 ```json
 {
-  error:"invalid_client",
-  error_description:"Client not found",
+  error: "invalid_client",
+  error_description: "Client not found",
 }
 ```
 
@@ -83,16 +83,15 @@ http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http:
 
 ```json
 {
-  client_id:"1234abc",
-  client_secret:"2345bcd",
-  refresh_token:"YourRefreshToken",
+  client_id: "1234abc",
+  client_secret: "2345bcd",
+  refresh_token: "YourRefreshToken",
   grant_type: "refresh_token",
 }
 ```
 
 ## Refresh Token Response
 
-Формат аналогичный ([AccessTokenResponse](https://github.com/SolarMaximus/fondvostok/blob/master/OAuth.md#Access-Token-Response))
-
+Формат аналогичный AccessTokenResponse.
 Если все параметры валидные, то передаются новые access_token и refresh_token. 
 После обновления старые токены на стороне пользователя должны быть удалены/заблокированы. 
