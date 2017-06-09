@@ -9,7 +9,7 @@
 4. **state** - идентификатор сессии клиента. Является опциональным. 
 
 Пример GET-запроса:
-http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://your_domain
+http://domain/main/sso/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://your_url
 
 ## Authorization Response
 
