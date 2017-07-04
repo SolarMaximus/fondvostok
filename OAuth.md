@@ -9,7 +9,7 @@
 4. **state** - идентификатор сессии клиента. Является опциональным. 
 
 Пример GET-запроса:
-http://domain/main/sso/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://your_url
+http://domain/Login.aspx?client_id=1234abc&response_type=code&redirect_uri=http://yandex.ru
 
 ## Authorization Response
 
@@ -42,7 +42,7 @@ http://domain/main/sso/Login.aspx?client_id=1234abc&response_type=code&redirect_
   client_secret: "2345bcd",
   code: "veryuniquevalue",
   grant_type: "authorization_code",
-  redirect_uri: "http://yourdomain"
+  redirect_uri: "http://yandex.ru"
 }
 ```
 
@@ -68,6 +68,42 @@ http://domain/main/sso/Login.aspx?client_id=1234abc&response_type=code&redirect_
 {
   error: "invalid_client",
   error_description: "Client not found",
+}
+```
+
+## POST User Profile Request
+
+Клиент формирует POST-запрос к Login.aspx/UserProfile, передавая следующие параметры:
+1. **access_token** - ключ для авторизации. 
+
+Пример запроса:
+
+```javascript
+{
+  "access_token": "pSixiapzz06SgFWd5cJMEcs7wcRNyRTY1ZzCvnUMjrDv_WsSG4mmfRLOeW_mToNcJSAIiRbULJVGP8XsB841iA"
+}
+```
+
+## User Profile Response
+
+Если запрос успешно обработан, то ответ содержит следующие параметры:
+1. **username** - передается уникальное имя пользователя. 
+2. **email** - передается email пользователя.
+
+Код ответа - 200. 
+
+Если при выполнении запроса произошла ошибка, то ответ содержит следующие параметры:
+1. **error** - код ошибки. 
+2. **error_description** - словесное описание ошибки.
+
+Код ответа - 404. 
+
+Пример ответа:
+
+```javascript
+{
+  error: "user_not_found",
+  error_description: "User not found by access token"
 }
 ```
 
